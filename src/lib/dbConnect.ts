@@ -10,7 +10,7 @@ async function DBConnect(): Promise<void>{
             console.log("Already Connected to Database")
             return;
         }
-        //clg db
+        
         try {
           const db =  await mongoose.connect(process.env.MONGODB || '')
            connection.isConnected = db.connections[0].readyState
